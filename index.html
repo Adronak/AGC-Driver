@@ -1,101 +1,440 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AGC-Driver - Contact</title>
+    <title>AGC Driver - Chauffeur VTC Premium Cote d'Azur</title>
+    <meta
+      name="description"
+      content="AGC Driver, chauffeur VTC premium sur la Cote d'Azur et les Bouches-du-Rhone. Transferts aeroport, mise a disposition, evenements. Service discret, ponctuel et haut de gamme."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://agcdriver.fr/" />
+    <meta name="author" content="AGC Driver" />
+    <meta name="theme-color" content="#0a0c10" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data: https://images.unsplash.com https://tile.openstreetmap.org https://*.tile.openstreetmap.org; media-src 'self'; script-src 'self' https://unpkg.com 'nonce-agcdriver2026'; script-src-attr 'none'; style-src 'self' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://fonts.googleapis.com https://fonts.gstatic.com; upgrade-insecure-requests"
+    />
+
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AGC Driver" />
+    <meta property="og:title" content="AGC Driver - Chauffeur VTC Premium Cote d'Azur" />
+    <meta
+      property="og:description"
+      content="AGC Driver, chauffeur VTC premium sur la Cote d'Azur et les Bouches-du-Rhone. Transferts aeroport, mise a disposition, evenements. Service discret, ponctuel et haut de gamme."
+    />
+    <meta property="og:url" content="https://agcdriver.fr/" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&h=630&q=80"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Berline premium AGC Driver" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AGC Driver - Chauffeur VTC Premium Cote d'Azur" />
+    <meta
+      name="twitter:description"
+      content="AGC Driver, chauffeur VTC premium sur la Cote d'Azur et les Bouches-du-Rhone. Transferts aeroport, mise a disposition, evenements. Service discret, ponctuel et haut de gamme."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&h=630&q=80"
+    />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="application/ld+json" nonce="agcdriver2026">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "AGC Driver",
+        "url": "https://agcdriver.fr/",
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+        "telephone": "+33 7 86 64 96 58",
+        "email": "contact@agcdriver.fr",
+        "priceRange": "EUR",
+        "serviceType": "Chauffeur VTC premium",
+        "areaServed": [
+          "Saint-Tropez",
+          "Cannes",
+          "Monaco",
+          "Nice Aeroport",
+          "Marseille Aeroport"
+        ],
+        "openingHours": "Mo-Su 00:00-23:59",
+        "description": "AGC Driver, chauffeur VTC premium sur la Cote d'Azur et les Bouches-du-Rhone. Transferts aeroport, mise a disposition, evenements."
+      }
+    </script>
   </head>
-  <body>
-    <div class="bg-orb orb-one"></div>
-    <div class="bg-orb orb-two"></div>
 
-    <main class="page">
-      <section class="card" aria-labelledby="page-title">
-        <header class="card__header">
-          <span class="badge">AGC-Driver</span>
-          <h1 id="page-title">Demande rapide</h1>
-          <p class="subtitle">Laissez vos infos, on vous rappelle vite.</p>
-        </header>
+  <body class="no-js">
+    <div class="ambient-glow" aria-hidden="true"></div>
 
-        <form class="form" id="contact-form">
-          <div class="form__grid">
-            <div class="field">
-              <label for="name">Nom complet</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Votre nom"
-                autocomplete="name"
-                required
-              />
+    <header class="nav">
+      <div class="nav-inner container">
+        <a class="logo" href="#top">AGC<span>Driver</span></a>
+        <nav class="nav-links" id="nav-menu" aria-label="Navigation principale">
+          <a href="#apropos">A propos</a>
+          <a href="#services">Prestations</a>
+          <a href="#vehicules">Vehicules</a>
+          <a href="#zones">Zones</a>
+          <a href="#tarifs">Tarifs</a>
+          <a href="#contact" class="cta">Reserver</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80"
+        >
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="hero-content container">
+          <div class="hero-text">
+            <p class="eyebrow">Chauffeur prive premium</p>
+            <h1>
+              L'elegance d'un service <span>24/7</span> sur la Cote d'Azur.
+            </h1>
+            <p class="lead">
+              Transferts aeroport, mise a disposition, evenements et deplacements
+              confidentiels. Un chauffeur dedie, discret et ponctuel.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="tel:+33786649658">Reserver maintenant</a>
+              <a class="btn ghost" href="#vehicules">Voir la flotte</a>
             </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="vous@email.com"
-                autocomplete="email"
-                required
-              />
-            </div>
-            <div class="field">
-              <label for="subject">Sujet</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Votre demande"
-                required
-              />
-            </div>
-            <div class="field">
-              <label for="phone">Telephone</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="+33 6 12 34 56 78"
-                autocomplete="tel"
-              />
+            <div class="hero-highlights">
+              <div class="highlight-card">
+                <span>Disponibilite</span>
+                <strong>24/7</strong>
+                <small>Reponse immediate</small>
+              </div>
+              <div class="highlight-card">
+                <span>Zone</span>
+                <strong>Cote d'Azur</strong>
+                <small>Saint-Tropez - Cannes - Monaco</small>
+              </div>
+              <div class="highlight-card">
+                <span>Service</span>
+                <strong>Premium</strong>
+                <small>Confort &amp; confidentialite</small>
+              </div>
             </div>
           </div>
 
-          <div class="field field--full">
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="Expliquez votre besoin..."
-              required
-            ></textarea>
+          <aside class="hero-panel">
+            <div class="panel-card">
+              <p class="panel-title">Reservation express</p>
+              <a class="panel-phone" href="tel:+33786649658">07 86 64 96 58</a>
+              <p class="panel-note">Devis en moins de 15 minutes</p>
+              <div class="panel-tags">
+                <span>Chauffeur bilingue</span>
+                <span>Wi-Fi a bord</span>
+                <span>Paiement CB</span>
+              </div>
+              <a class="btn ghost" href="#contact">Demander un devis</a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+
+      <section id="apropos" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">A propos</p>
+            <h2>Un service haut de gamme pense pour l'exigence.</h2>
+            <p class="section-text">
+              AGC Driver accompagne une clientele exigeante avec une approche
+              sur-mesure, entre discretion, rigueur et elegance. Chaque trajet est
+              optimise pour vous offrir un confort total.
+            </p>
+          </div>
+          <div class="about-grid">
+            <article class="about-card">
+              <h3>Discretion totale</h3>
+              <p>Confidentialite assuree et gestion fluide des demandes VIP.</p>
+            </article>
+            <article class="about-card">
+              <h3>Ponctualite absolue</h3>
+              <p>Suivi en temps reel, anticipation des horaires et coordination.</p>
+            </article>
+            <article class="about-card">
+              <h3>Confort premium</h3>
+              <p>Vehicules entretenus, ambiance raffinee et services a bord.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section alt reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Prestations</p>
+            <h2>Des trajets maitrises, du lever au dernier rendez-vous.</h2>
+            <p class="section-text">
+              Transferts, mises a disposition et evenements, avec un accompagnement
+              fluide pour chaque besoin professionnel ou prive.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-icon">*</span>
+              <h3>Transferts aeroport</h3>
+              <p>Nice, Marseille, Cannes-Mandelieu. Accueil personnalise.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">*</span>
+              <h3>Mise a disposition</h3>
+              <p>Chauffeur prive a l'heure ou a la journee.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">*</span>
+              <h3>Evenements &amp; soirees</h3>
+              <p>Planification multi-trajets, horaires flexibles.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">*</span>
+              <h3>Business &amp; VIP</h3>
+              <p>Service discret pour dirigeants, artistes et invites.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="vehicules" class="section dark reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Vehicules</p>
+            <h2>Une flotte premium, entretenue avec rigueur.</h2>
+            <p class="section-text">
+              Berlines et vans haut de gamme, selectionnes pour le confort et la
+              serenite de vos trajets.
+            </p>
           </div>
 
-          <button class="btn" type="submit">
-            <span>Envoyer la demande</span>
-          </button>
+          <div class="vehicle-slider" aria-live="polite">
+            <div class="vehicle-showcase">
+              <div class="vehicle-media">
+                <img id="vehicle-image" src="" alt="" loading="lazy" />
+                <div class="vehicle-glow" aria-hidden="true"></div>
+              </div>
+              <div class="vehicle-info">
+                <p class="vehicle-eyebrow" id="vehicle-type"></p>
+                <h3 id="vehicle-name"></h3>
+                <p id="vehicle-desc"></p>
+                <div class="vehicle-meta">
+                  <span id="vehicle-price"></span>
+                  <span id="vehicle-capacity"></span>
+                </div>
+                <div class="vehicle-tags" id="vehicle-tags"></div>
+                <a class="btn ghost" href="#contact">Demander un devis</a>
+              </div>
+            </div>
+            <div class="vehicle-controls">
+              <button class="arrow" id="prev" type="button" aria-label="Vehicule precedent">&lsaquo;</button>
+              <div class="vehicle-dots" id="vehicle-dots" aria-label="Selection de vehicule"></div>
+              <button class="arrow" id="next" type="button" aria-label="Vehicule suivant">&rsaquo;</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <p class="form__status" aria-live="polite"></p>
-        </form>
+      <section id="zones" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Zones</p>
+            <h2>Une presence active sur la Cote d'Azur.</h2>
+            <p class="section-text">
+              Saint-Tropez, Cannes, Monaco, Nice, Antibes et Marseille. Autres
+              destinations sur devis selon vos besoins.
+            </p>
+          </div>
 
-        <div class="card__foot">
-          <span class="chip">Reponse sous 24h</span>
-          <span class="chip">Support local</span>
-          <span class="chip">Suivi personnalise</span>
+          <div class="zones-grid">
+            <div class="zones-list">
+              <h3>Principales destinations</h3>
+              <ul class="zones-pills">
+                <li>Saint-Tropez</li>
+                <li>Cannes</li>
+                <li>Monaco</li>
+                <li>Nice Aeroport</li>
+                <li>Antibes</li>
+                <li>Marseille Aeroport</li>
+              </ul>
+              <p class="zones-note">Autres trajets sur demande, devis rapide.</p>
+            </div>
+            <div class="map-card">
+              <div id="service-map" class="map" aria-label="Carte interactive"></div>
+              <div class="map-legend">
+                <span class="legend-dot"></span>
+                <span>Zone principale desservie</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tarifs" class="section dark reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Tarifs</p>
+            <h2>Des prix clairs, sans surprise.</h2>
+            <p class="section-text">
+              Tarification transparente, adaptee aux distances, horaires et
+              services demandes.
+            </p>
+          </div>
+
+          <div class="tarifs-grid">
+            <div class="tarif-card">
+              <div class="tarif-title">Centre-ville</div>
+              <div class="tarif-value">20 EUR</div>
+              <div class="tarif-note">Selon distance</div>
+            </div>
+            <div class="tarif-card">
+              <div class="tarif-title">Hotels &amp; soirees</div>
+              <div class="tarif-value">30-40 EUR</div>
+              <div class="tarif-note">Par nuit</div>
+            </div>
+            <div class="tarif-card">
+              <div class="tarif-title">Cannes</div>
+              <div class="tarif-value">80 EUR</div>
+              <div class="tarif-note">Trajet direct</div>
+            </div>
+            <div class="tarif-card">
+              <div class="tarif-title">Nice Aeroport</div>
+              <div class="tarif-value">350 EUR</div>
+              <div class="tarif-note">Accueil inclus</div>
+            </div>
+            <div class="tarif-card">
+              <div class="tarif-title">Marseille Aeroport</div>
+              <div class="tarif-value">380 EUR</div>
+              <div class="tarif-note">Trajet premium</div>
+            </div>
+            <div class="tarif-card highlight">
+              <div class="tarif-title">Mise a disposition</div>
+              <div class="tarif-value">120 EUR / h</div>
+              <div class="tarif-note">Chauffeur dedie</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-info">
+              <p class="eyebrow">Contact</p>
+              <h2>Un chauffeur, une reponse immediate.</h2>
+              <p class="section-text">
+                Reservation par telephone ou message. Nous confirmons votre trajet
+                en quelques minutes.
+              </p>
+              <div class="contact-actions">
+                <a class="btn primary" href="tel:+33786649658">Appeler AGC Driver</a>
+                <a class="btn ghost" href="mailto:contact@agcdriver.fr">contact@agcdriver.fr</a>
+              </div>
+              <div class="contact-details">
+                <div>
+                  <span>Disponibilite</span>
+                  <strong>24/7</strong>
+                </div>
+                <div>
+                  <span>Reponse</span>
+                  <strong>&lt; 15 min</strong>
+                </div>
+                <div>
+                  <span>Paiement</span>
+                  <strong>CB - Especes</strong>
+                </div>
+              </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+              <div class="field">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="vous@email.com"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Decrivez votre besoin..."
+                  required
+                ></textarea>
+              </div>
+              <button class="btn primary" type="submit"><span>Envoyer la demande</span></button>
+              <p class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
+    <footer>
+      <div class="container footer-inner">
+        <p>&copy; AGC Driver - Chauffeur VTC premium Cote d'Azur</p>
+        <div class="footer-links">
+          <a href="#apropos">A propos</a>
+          <a href="#vehicules">Vehicules</a>
+          <a href="#contact">Contact</a>
+          <a href="politique-confidentialite.html">Politique de confidentialite</a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>
