@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AGC-Driver - Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+
+    <main class="page">
+      <section class="card" aria-labelledby="page-title">
+        <header class="card__header">
+          <span class="badge">AGC-Driver</span>
+          <h1 id="page-title">Demande rapide</h1>
+          <p class="subtitle">Laissez vos infos, on vous rappelle vite.</p>
+        </header>
+
+        <form class="form" id="contact-form">
+          <div class="form__grid">
+            <div class="field">
+              <label for="name">Nom complet</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Votre nom"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="vous@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="subject">Sujet</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Votre demande"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="phone">Telephone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+33 6 12 34 56 78"
+                autocomplete="tel"
+              />
+            </div>
+          </div>
+
+          <div class="field field--full">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Expliquez votre besoin..."
+              required
+            ></textarea>
+          </div>
+
+          <button class="btn" type="submit">
+            <span>Envoyer la demande</span>
+          </button>
+
+          <p class="form__status" aria-live="polite"></p>
+        </form>
+
+        <div class="card__foot">
+          <span class="chip">Reponse sous 24h</span>
+          <span class="chip">Support local</span>
+          <span class="chip">Suivi personnalise</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
