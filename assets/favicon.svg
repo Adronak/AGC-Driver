@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AGC Driver">
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AG Driver">
   <rect width="64" height="64" rx="16" fill="#0a0c10" />
   <path d="M32 12L48 52H16L32 12Z" fill="#c8a55a" />
   <path d="M24 38H40" stroke="#0a0c10" stroke-width="4" stroke-linecap="round" />
 </svg>
+
