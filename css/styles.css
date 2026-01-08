@@ -228,16 +228,35 @@ p {
 }
 
 .eyebrow {
-  font-size: 12px;
+  font-size: 22px;
+  font-weight: bold;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 16px;
   display: inline-block;
+  text-shadow:
+    0 0 8px rgba(212, 180, 106, 0.45),
+    0 0 22px rgba(212, 180, 106, 0.25),
+    0 0 40px rgba(212, 180, 106, 0.12);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 6px rgba(212, 180, 106, 0.30),
+      0 0 14px rgba(212, 180, 106, 0.15);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(212, 180, 106, 0.80),
+      0 0 26px rgba(212, 180, 106, 0.25);
+  }
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 4.5vw, 4.5rem);
+  font-size: clamp(1.5rem, 3.0vw, 3.0rem);
   line-height: 1.05;
 }
 
@@ -247,7 +266,7 @@ p {
 
 .lead {
   margin: 20px 0 32px;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   color: var(--muted);
 }
 
